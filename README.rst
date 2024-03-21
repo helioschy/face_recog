@@ -257,13 +257,6 @@ More
 
 #. 关于 ``face_reco_from_camera.py`` 人脸识别卡顿 FPS 低问题, 原因是特征描述子提取很费时间; 光跑 ``face_descriptor_from_camera.py`` 中 ``face_reco_model.compute_face_descriptor`` 在我的机器上得到的平均 FPS 在 5 左右 (检测在 ``0.03s`` , 特征描述子提取在 ``0.158s`` , 和已知人脸进行遍历对比在 ``0.003s`` 左右); 所以主要提取特征时候耗资源, 可以用 OT 去做追踪 (使用 ``face_reco_from_camera_ot.py`` ), 而不是对每一帧都做检测+识别, 识别的性能从 20 FPS -> 200 FPS
 
-可以访问我的博客获取本项目的更详细介绍, 如有问题可以邮件联系我 /
-For more details, please visit my blog (in chinese) or send mail to coneypo@foxmail.com:
-
-* Blog: https://www.cnblogs.com/AdaminXie/p/9010298.html
-
-* 关于 OT 部分的更新在 Blog: https://www.cnblogs.com/AdaminXie/p/13566269.html
-
 * Feel free to create issue or contribute PR for it:)
 
 Thanks for your support.
